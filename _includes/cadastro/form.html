@@ -1,7 +1,7 @@
 <form method="POST" action="https://formspree.io/matheus.costa.vieira@gmail.com">
-    <input type="hidden" name="_next" value="{{ '/cadastro/agradecimento/' | prepend: site.baseurl }}" />
     <input type="hidden" name="_language" value="pt-BR" />
-    <input type="hidden" name="_subject" value="Adição de estabelecimento!" required />
+    <input type="hidden" name="_subject" value="Adição de estabelecimento!" />
+    <input type="hidden" name="_next" value="{{ '/obrigado/' | prepend: site.baseurl }}" />
 
     <dl>
         <dt><label for="nome">Nome do estabelecimento</label></dt>
@@ -41,6 +41,6 @@
     </dl>
 
     <br />
-    <button type="submit" class="btn btn-ghost">Encaminhar</button>
+    <button type="submit" class="btn btn-primary mr-2">Encaminhar</button>
 </form>
 <br />
