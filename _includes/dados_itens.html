@@ -1,0 +1,23 @@
+<fieldset>
+    <legend>Itens a solicitar</legend>
+    <p>Preencha os itens conforme a sua necessidade, lembre-se para evitar estocar grandes quantidades, pense no próximo</p>
+    <div id="divItens">
+        <fieldset>
+            <legend>Item 1</legend>
+            <div>
+                <label for="txtItem">Item:</label>
+                <input type="text" name="txtItem" id="txtItem" />
+            </div>
+            <div>
+                <label for="txtQuantidade">Quantidade:</label>
+                <input type="number" name="txtQuantidade" id="txtQuantidade" />
+                <label for="txtUnidade">Unidade de Medida:</label>
+                <input type="text" name="txtUnidade" id="txtUnidade" />
+                <span>g(gramas), kg(kilogramas)</span>
+                <button id="btnRemoverItem">Remover item</button>
+            </div>
+        </fieldset>
+        <br />
+        <button id="btnAddItem">Adicionar item</button>
+    </div>
+</fieldset>
