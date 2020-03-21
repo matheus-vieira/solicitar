@@ -28,11 +28,16 @@
             enumerable: false,
             configurable: false,
             writable: false,
-            value: function () {
+            value: function (checkCallback) {
                 var a = this.concat();
                 for (var i = 0; i < a.length; ++i) {
                     for (var j = i + 1; j < a.length; ++j) {
-                        if (JSON.stringify(a[i]) === JSON.stringify(a[j]))
+                        let equal = false;
+                        if (typeof (checkCallback) === "function")
+                            equal = checkCallback(a[i], a[j]);
+                        else
+                            equal = JSON.stringify(a[i]) === JSON.stringify(a[j]);
+                        if (equal)
                             a.splice(j--, 1);
                     }
                 }
@@ -53,7 +58,10 @@
                         estabelecimentoController
                             .getAll()
                             .concat(estabelecimentos)
-                            .unique()
+                            .unique(function (a, b) {
+                                return JSON.stringify(a["Endereço"])
+                                    === JSON.stringify(b["Endereço"])
+                            })
                     );
                 } catch (error) {
                     console.error(error);

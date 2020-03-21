@@ -8,6 +8,19 @@
             "Bairro": "Sítio Cercado",
             "Cidade": "Curitiba",
             "Uf": "PR"
-        }
+        },
+        "Categoria": ["mercado", "padaria", "açougue"]
+    },
+    {
+        "Nome": "Supermercado condor",
+        "Telefone": "41988024599",
+        "Whatsapp": "41988024599",
+        "Endereço": {
+            "logradouro": "Rua Izaque Ferreira da Cruz, 3157",
+            "Bairro": "Sítio Cercado",
+            "Cidade": "Curitiba",
+            "Uf": "PR"
+        },
+        "Categoria": ["mercado", "padaria", "açougue"]
     }
 ]
