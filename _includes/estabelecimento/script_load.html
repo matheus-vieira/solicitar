@@ -1,0 +1,8 @@
+<script>
+    window.addEventListener("load", function (event) {
+        fetch('/assets/estabelecimentos.json')
+            .then(r => r.json())
+            .then(initEstabelecimentos)
+            .then(initCategorias);
+    })
+</script>

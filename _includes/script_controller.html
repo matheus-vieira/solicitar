@@ -1,14 +1,18 @@
 <script>
     const controller = function controller(key, obj) {
-        let list = localStorage.getItem(key);
-        if (list) list = JSON.parse(list);
-        list = list || [];
-
-        list = list.map(i => new obj(i));
+        let list = [];
 
         const updateStorage = function updateStorage(newList) {
             const str = JSON.stringify(newList || list);
             localStorage.setItem(key, str);
+        };
+
+        const getStorage = function getStorage(newList) {
+            list = localStorage.getItem(key);
+            if (list) list = JSON.parse(list);
+            list = list || [];
+
+            list = list.map(i => new obj(i));
         };
 
         const change = function change(item, action) {
@@ -20,10 +24,13 @@
             updateStorage();
         };
 
+        getStorage();
+
         return Object.create(null, {
             refresh: {
                 enumerable: true, writable: false, configurable: true, value: function (newList) {
                     updateStorage(newList);
+                    getStorage();
                 }
             },
             count: {
