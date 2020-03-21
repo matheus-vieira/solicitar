@@ -1,0 +1,46 @@
+<form method="POST" action="https://formspree.io/matheus.costa.vieira@gmail.com">
+    <input type="hidden" name="_next" value="{{ '/cadastro/agradecimento/' | prepend: site.baseurl }}" />
+    <input type="hidden" name="_language" value="pt-BR" />
+    <input type="hidden" name="_subject" value="Adição de estabelecimento!" required />
+
+    <dl>
+        <dt><label for="nome">Nome do estabelecimento</label></dt>
+        <dd><input type="text" class="form-control input-block" name="nome" placeholder="Nome do estabelecimento"
+                required /></dd>
+    </dl>
+    <dl>
+        <dt><label for="telefone">Telefone de contato</label></dt>
+        <dd><input type="tel" class="form-control" name="telefone" placeholder="(99) 9999-9999" required />
+        </dd>
+    </dl>
+    <dl>
+        <dt><label for="whatsapp">Whatsapp de contato</label></dt>
+        <dd><input type="tel" class="form-control" name="whatsapp" placeholder="(99) 9999-9999" required />
+        </dd>
+    </dl>
+    <dl>
+        <dt><label for="logradouro">Logradouro</label></dt>
+        <dd><input type="text" class="form-control input-block" name="logradouro" placeholder="Rua, número" required />
+        </dd>
+    </dl>
+    <dl>
+        <dt><label for="bairro">Bairro</label></dt>
+        <dd><input type="text" class="form-control input-block" name="bairro" placeholder="Bairro" required /></dd>
+    </dl>
+    <dl>
+        <dt><label for="cidade">Cidade</label></dt>
+        <dd><input type="text" class="form-control input-block" name="cidade" placeholder="Cidade" required /></dd>
+    </dl>
+    <dl>
+        <dt><label for="estado">Estado</label></dt>
+        <dd><input type="text" class="form-control input-block" name="estado" placeholder="Estado" required /></dd>
+    </dl>
+    <dl>
+        <dt><label for="categoria">Categoria</label></dt>
+        <dd><input type="text" class="form-control input-block" name="categoria" placeholder="Categorias, separadas por vírgula - mercado, ferragem" required /></dd>
+    </dl>
+
+    <br />
+    <button type="submit" class="btn btn-ghost">Encaminhar</button>
+</form>
+<br />

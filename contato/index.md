@@ -8,6 +8,6 @@ Caso esteja utilizando um computador público recomenda-se utilizar o modo priva
 
 {% include dados_pessoais.html %}
 
-[Voltar](../index.md) | [Selecione o estabelecimento](../estabelecimento/index.md){: #aProx }
+[Voltar]({{ '/' | prepend: site.baseurl }}) | [Selecione o estabelecimento]({{ '/estabelecimento' | prepend: site.baseurl }}){: #aProx }
 
 {% include dados_pessoais_scripts.html %}

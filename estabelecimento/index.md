@@ -4,6 +4,6 @@ Aqui você deve selecionar o estabelecimento que irá solicitar a compra
 
 {% include estabelecimento/form.html %}
 
-[Voltar](../contato/index.md) | [Selecione os itens](../itens/index.md){: #aProx }
+[Voltar]({{ '/contato' | prepend: site.baseurl }}) | [Selecione os itens]({{ '/itens' | prepend: site.baseurl }}){: #aProx }
 
 {% include estabelecimento/scripts.html %}

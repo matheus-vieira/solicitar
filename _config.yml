@@ -1,0 +1,24 @@
+# --- General options --- #
+
+# Name of website
+title: Solicitação de compras
+
+# Short description of your site
+description: Ajudando as pessoas a manter a quarentena
+
+# Language
+lang: pt-BR
+
+repository: matheus-vieira/solicitacao-compra
+github: [metadata]
+
+incremental: true
+
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
+
+author:
+  name: Matheus Costa Vieira
+
+plugins:
+  - "jekyll-github-metadata"
