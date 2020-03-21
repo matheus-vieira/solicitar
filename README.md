@@ -9,3 +9,5 @@ Você desenvolvedor, nesse momento, pode ajudar no desenvolvimento.
 Novo layout, revisão de textos, adição de estabelecimentos, enfim todas as ideias são bem vindas.
 
 Faça o seu pull request.
+
+A ideia é fazer um formulário tipo "wizard", salvando informações em storage e no final encaminhando um e-mail ao estabelecimento.
