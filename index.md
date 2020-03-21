@@ -13,3 +13,5 @@ Você precisa comprar pão, solicite a uma padaria ou mercado próximo a sua cas
 Dessa forma evitamos superfaturamentos de plataformas.
 
 E ainda ajudamos os pequenos comerciantes.
+
+[Solicitar Compra](contato/index.md)
