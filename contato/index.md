@@ -8,6 +8,4 @@ Caso esteja utilizando um computador público recomenda-se utilizar o modo priva
 
 {% include dados_pessoais.html %}
 
-<div class="border-top border-gray-light mt-5 pt-3 text-right text-gray">
-    [Voltar](../index.md) | [Selecione o estabelecimento](../estabelecimento/index.md)
-</div>
+[Voltar](../index.md) | [Selecione o estabelecimento](../estabelecimento/index.md)
