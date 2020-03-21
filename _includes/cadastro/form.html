@@ -1,7 +1,7 @@
 <form method="POST" action="https://submit-form.com/qhft9OKUmBOWjwk1uKxVf">
     <input type="hidden" name="_email.subject" value="Adição de estabelecimento!" />
     <input type="hidden" name="_feedback.success.title" value="Obrigado, logo seu cadastro será efetuado!" />
-    <input type="hidden" name="_redirect" value="{{ '/obrigado/' | prepend: site.baseurl }}" />
+    <input type="hidden" name="_redirect" value="{{ '/obrigado/' | absolute_url }}" />
 
     <dl>
         <dt><label for="nome">Nome do estabelecimento</label></dt>
