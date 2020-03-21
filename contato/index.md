@@ -8,6 +8,6 @@ Caso esteja utilizando um computador público recomenda-se utilizar o modo priva
 
 {% include dados_pessoais.html %}
 
-\
+[Voltar](../index.md) | [Selecione o estabelecimento](../estabelecimento/index.md){: #aProx }
 
-[Voltar](../index.md) | [Selecione o estabelecimento](../estabelecimento/index.md)
+{% include dados_pessoais_scripts.html %}
