@@ -16,8 +16,9 @@
         Object.defineProperty(this, 'Nome', defineProp('txtNome'));
         Object.defineProperty(this, 'Celular', defineProp('txtCelular'));
         Object.defineProperty(this, 'Email', defineProp('txtEmail'));
-    };
-    const pessoaController = controller('pessoas', Pessoa);
+    },
+        pessoaController = controller('pessoas', Pessoa);
+
     document.getElementById("aProx")
         .addEventListener("click", function (ev) {
             const form = document.getElementById("formDadosPessoais");
