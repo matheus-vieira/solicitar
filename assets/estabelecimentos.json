@@ -1,0 +1,13 @@
+[
+    {
+        "Nome": "Mercado Bizzoto",
+        "Telefone": "41988024599",
+        "Whatsapp": "41988024599",
+        "Endereço": {
+            "logradouro": "Rua Ourizona, 3157",
+            "Bairro": "Sítio Cercado",
+            "Cidade": "Curitiba",
+            "Uf": "PR"
+        }
+    }
+]

@@ -1,0 +1,72 @@
+{% include script_controller.html %}
+
+<script>
+    const Estabelecimento = function Estabelecimento(d) {
+        if (!(this instanceof Estabelecimento))
+            return new Estabelecimento(formData);
+
+        Object.assign(this, d || {});
+    },
+        estabelecimentoController = controller('estabelecimentos', Estabelecimento);
+
+    document.getElementById("aProx")
+        .addEventListener("click", function (ev) {
+            const form = document.getElementById("formDadosEstabelecimento");
+            const formData = new FormData(form);
+            const estabelecimento = new Estabelecimento(formData);
+            try {
+                estabelecimentoController.add(estabelecimento);
+            } catch (error) {
+                ev.preventDefault();
+                console.error(error);
+                return false;
+            }
+        });
+
+    window.addEventListener("load", function (event) {
+        Object.defineProperty(Array.prototype, 'unique', {
+            enumerable: false,
+            configurable: false,
+            writable: false,
+            value: function () {
+                var a = this.concat();
+                for (var i = 0; i < a.length; ++i) {
+                    for (var j = i + 1; j < a.length; ++j) {
+                        if (JSON.stringify(a[i]) === JSON.stringify(a[j]))
+                            a.splice(j--, 1);
+                    }
+                }
+
+                return a;
+            }
+        });
+        const request = new XMLHttpRequest();
+        request.open('GET', '/assets/estabelecimentos.json', true);
+
+        request.onload = function () {
+            if (this.status >= 200 && this.status < 400) {
+                // Success!
+                try {
+                    const estabelecimentos = JSON.parse(this.response);
+
+                    estabelecimentoController.refresh(
+                        estabelecimentoController
+                            .getAll()
+                            .concat(estabelecimentos)
+                            .unique()
+                    );
+                } catch (error) {
+                    console.error(error);
+                }
+            } else {
+                // We reached our target server, but it returned an error
+            }
+        };
+
+        request.onerror = function () {
+            // There was a connection error of some sort
+        };
+
+        request.send();
+    })
+</script>

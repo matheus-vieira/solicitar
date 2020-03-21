@@ -1,13 +1,13 @@
 <script>
     const controller = function controller(key, obj) {
-        var lista = localStorage.getItem(key);
-        if (lista) lista = JSON.parse(lista);
-        lista = lista || [];
+        let list = localStorage.getItem(key);
+        if (list) list = JSON.parse(list);
+        list = list || [];
 
-        lista = lista.map(i => new obj(i));
+        list = list.map(i => new obj(i));
 
-        const updateStorage = function updateStorage() {
-            var str = JSON.stringify(lista);
+        const updateStorage = function updateStorage(newList) {
+            const str = JSON.stringify(newList || list);
             localStorage.setItem(key, str);
         };
 
@@ -21,38 +21,48 @@
         };
 
         return Object.create(null, {
+            refresh: {
+                enumerable: true, writable: false, configurable: true, value: function (newList) {
+                    updateStorage(newList);
+                }
+            },
+            count: {
+                enumerable: true, writable: false, configurable: true, value: function () {
+                    return list.length;
+                }
+            },
             getAll: {
                 enumerable: true, writable: false, configurable: true, value: function (prop, value) {
                     if (prop && value)
-                        return lista.filter(p => p[prop] === value);
-                    return lista;
+                        return list.filter(p => p[prop] === value);
+                    return list;
                 }
             },
             get: {
                 enumerable: true, writable: false, configurable: true, value: function (prop, value) {
                     if (prop && value)
-                        return lista.find(p => p[prop] === value);
+                        return list.find(p => p[prop] === value);
                 }
             },
             add: {
                 enumerable: true, writable: false, configurable: true, value: function (item) {
                     change(item, function () {
-                        lista.push(item);
+                        list.push(item);
                     });
                 }
             },
             remove: {
                 enumerable: true, writable: false, configurable: true, value: function (item) {
                     change(item, function () {
-                        var index = lista.findIndex(p => p.id === item.id);
-                        lista.splice(index, 1);
+                        var index = list.findIndex(p => p.id === item.id);
+                        list.splice(index, 1);
                     });
                 }
             },
             update: {
                 enumerable: true, writable: false, configurable: true, value: function (item) {
                     change(item, function () {
-                        var p = lista.find(p => p.id === item.id);
+                        var p = list.find(p => p.id === item.id);
                         Object.assign(p, item);
                     });
                 }
