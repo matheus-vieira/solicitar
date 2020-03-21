@@ -1,7 +1,7 @@
-<form method="POST" action="https://formspree.io/matheus.costa.vieira@gmail.com">
-    <input type="hidden" name="_language" value="pt-BR" />
-    <input type="hidden" name="_subject" value="Adição de estabelecimento!" />
-    <input type="hidden" name="_next" value="{{ '/obrigado/' | prepend: site.baseurl }}" />
+<form method="POST" action="https://submit-form.com/qhft9OKUmBOWjwk1uKxVf">
+    <input type="hidden" name="_email.subject" value="Adição de estabelecimento!" />
+    <input type="hidden" name="_feedback.success.title" value="Obrigado, logo seu cadastro será efetuado!" />
+    <input type="hidden" name="_redirect" value="{{ '/obrigado/' | prepend: site.baseurl }}" />
 
     <dl>
         <dt><label for="nome">Nome do estabelecimento</label></dt>
@@ -37,7 +37,8 @@
     </dl>
     <dl>
         <dt><label for="categoria">Categoria</label></dt>
-        <dd><input type="text" class="form-control input-block" name="categoria" placeholder="Categorias, separadas por vírgula - mercado, ferragem" required /></dd>
+        <dd><input type="text" class="form-control input-block" name="categoria"
+                placeholder="Categorias, separadas por vírgula - mercado, ferragem" required /></dd>
     </dl>
 
     <br />
