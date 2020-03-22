@@ -2,16 +2,49 @@
 
 Projeto para ajudar a manter as pessoas em sua quarentena
 
-Este projeto tem como objetivo manter as pessoas em casa o máximo possível.
+Profissionais de saúde recomendam que estejamos em reclusão por um período indeterminado de tempo
 
-Você desenvolvedor, nesse momento, pode ajudar no desenvolvimento.
+De forma que achatemos a curva de contágio do Corona vírus.
 
-Novo layout, revisão de textos, adição de estabelecimentos, enfim todas as ideias são bem vindas.
+Toda a ajuda é bem vinda no desenvolvimento desse site.
+
+Alterações de layout, revisão de textos, adição de estabelecimentos, enfim todas as ideias são bem vindas.
 
 Faça o seu pull request.
 
-A ideia é fazer um formulário tipo "wizard", salvando informações em storage e no final encaminhando um e-mail ao estabelecimento.
+## Sobre a ideia
 
+Oferecer um espaço onde estabelecimentos possam receber pedidos e as pessoas em quarentena possam solicitar sem saírem de casa.
+
+### Fluxo da solicitação de compra
+
+Informar dados de contato do solicitante
+
+Selecionar o estabelecimento que se deseja pedir.
+
+Adicionar todos os itens que deseja solicita (produtos de padarias, mercados, açougue, e qualquer outro tipo de estabelecimento)
+
+Por fim encaminhar um email ou whatsapp para o estabelecimento.
+
+Não há responsabilidade sobre a existência de itens pedidos.
+
+Confirme os dados do estabelecimento.
+
+## Pendências
+
+- [ ] Usar localização para filtrar os estabelecimentos.
+
+- [ ] Filtrar por categoria(s).
+
+- [ ] Salvar o estabelecimento selecionando.
+
+- [ ] Adicionar itens.
+
+- [ ] Remover itens.
+
+- [ ] Enviar a solicitação de compra
+
+- [ ] Cadastrar estabelecimentos com dados reais.
 
 ## Rodar localmente
 
