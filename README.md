@@ -46,6 +46,8 @@ Confirme os dados do estabelecimento.
 
 - [ ] Cadastrar estabelecimentos com dados reais.
 
+- [ ] Ajustar os formulários como a página de cadastro
+
 ## Rodar localmente
 
 Para executar esse projeto primeiro tenha certeza de ter o Jekyll instalado
