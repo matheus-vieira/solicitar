@@ -48,6 +48,8 @@ Confirme os dados do estabelecimento.
 
 - [ ] Ajustar os formulários como a página de cadastro
 
+- [ ] Verificar o serviço [Form Submit](https://formsubmit.co/)
+
 ## Rodar localmente
 
 Para executar esse projeto primeiro tenha certeza de ter o Jekyll instalado
