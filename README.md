@@ -1,16 +1,8 @@
 # Solicitação de Compras
 
-Projeto para ajudar a manter as pessoas em sua quarentena
+O projeto tem como objetivo manter as pessoas em quarentena. Os profissionais da saúde recomendam que fiquemos em reclusão por um período indeterminado com o intuito de achatar a curva de contágio do corona vírus (COVID 19), toda ajuda (alteração de layout, revisão de texto, adição de estabelecimento e etc) é bem vinda.
 
-Profissionais de saúde recomendam que estejamos em reclusão por um período indeterminado de tempo
-
-De forma que achatemos a curva de contágio do Corona vírus.
-
-Toda a ajuda é bem vinda no desenvolvimento desse site.
-
-Alterações de layout, revisão de textos, adição de estabelecimentos, enfim todas as ideias são bem vindas.
-
-Faça o seu pull request.
+Faça seu pull request!
 
 ## Sobre a ideia
 
