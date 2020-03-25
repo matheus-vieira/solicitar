@@ -2,6 +2,8 @@
 
 Aqui você deve selecionar o estabelecimento que irá solicitar a compra
 
-{% include dados_itens.html %}
+{% include itens/dados_itens.html %}
 
 [Voltar]({{ '/estabelecimento' | prepend: site.baseurl }}) | [Solicitar]({{ '/obrigado' | prepend: site.baseurl }}){: #aProx }
+
+{% include itens/scripts.html %}

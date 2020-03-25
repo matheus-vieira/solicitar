@@ -1,0 +1,11 @@
+<script>
+    const addHtmlItem = function addHtmlItem(item) {
+        const text = itemTpl.supplant(item);
+        divItens.insertAdjacentHTML('beforeend', text);
+    },
+        addItem = function addItem() {
+            const item = new Item({});
+            itemList.push(item);
+            addHtmlItem(item);
+        };
+</script>
