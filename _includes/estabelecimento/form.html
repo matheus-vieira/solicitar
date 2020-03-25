@@ -1,30 +1,38 @@
-<form>
-    <fieldset>
-        <legend>Estabelecimento</legend>
-        <p>Aqui você pode filtrar o estabelecimento conforme categorias</p>
-        <div>
-            <label for="txtEstabelecimentoCategoria">Categoria:</label>
-            <input type="text" name="txtEstabelecimentoCategoria" id="txtEstabelecimentoCategoria" />
-        </div>
-        <div>
-            <p>Ao selecionar um estabelecimento você verá informações de contato</p>
-            <label for="txtEstabelecimento">Estabelecimento:</label>
-            <select name="txtEstabelecimento" id="txtEstabelecimentoNome">
+<script type="text/html" id="tpl-estabelecimento-selecionado">
+<h3>Detalhes do estabelecimento selecionado</h3>
+<div>
+    <strong>Nome: </strong> {Nome}<br />
+    <strong>Telefone: </strong> {Telefone}<br />
+    <strong>Whatsapp (opcional): </strong> {Whatsapp}<br />
+    <strong>Endereço: </strong> {label}<br />
+</div>
+</script>
+<form id="formEstabelecimento">
+    <dl>
+        <dt><label for="txtEstabelecimentoCategoria">Categoria</label></dt>
+        <dd><input type="text" name="txtEstabelecimentoCategoria" id="txtEstabelecimentoCategoria"
+                class="form-control input-block" placeholder="mercado, açougue" required /></dd>
+    </dl>
+    <dl>
+        <dt><label for="txtEstabelecimentoNome">Estabelecimento</label></dt>
+        <dd>
+            <select name="txtEstabelecimentoNome" id="txtEstabelecimentoNome" class="form-control input-block" required>
                 <option value="-1" selected="true">Selecione um estabelecimento</option>
-            </select>
-        </div>
-        <div>
-            <h3>Detalhes do estabelecimento</h3>
-            <div>
-                <strong>Nome: </strong> Nome do estabelecimento <br />
-                <strong>Telefone: </strong> (99) 9999 - 9999 <br />
-                <strong>Whatsapp (opcional): </strong> (99) 9999 - 9999 <br />
-                <strong>Logradouro: </strong> Tipo do Logradouro + Nome do Logradouro + Número do Lote +
-                Complemento (se houver)<br />
-                <strong>Bairro: </strong> Nome do Bairro <br />
-                <strong>Cidade/UF: </strong> Nome da Localidade + Sigla da Unidade da Federação <br />
-            </div>
-        </div>
-    </fieldset>
+            </select></dd>
+    </dl>
 </form>
-<br/>
+<div id="divDetalhes">
+    <h3>Detalhes do estabelecimento selecionado</h3>
+    <div>
+        <strong>Nome: </strong> <br />
+        <strong>Telefone: </strong> <br />
+        <strong>Whatsapp (opcional): </strong><br />
+        <strong>Endereço: </strong><br />
+    </div>
+</div>
+<br />
+<script>
+    const estabelecimentoSelecionadoTpl = document.getElementById("tpl-estabelecimento-selecionado").innerHTML,
+        divDetalhes = document.getElementById("divDetalhes"),
+        formEstabelecimento = document.getElementById("formEstabelecimento");
+</script>
