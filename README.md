@@ -25,21 +25,14 @@ Confirme os dados do estabelecimento.
 ## Pendências
 
 - [ ] Usar localização para filtrar os estabelecimentos.
-
 - [ ] Filtrar por categoria(s).
-
 - [ ] Salvar o estabelecimento selecionando.
-
-- [ ] Adicionar itens.
-
+- [x] Adicionar itens.
 - [ ] Remover itens.
-
+- [ ] Salvar itens na solicitação de compra
 - [ ] Enviar a solicitação de compra
-
 - [ ] Cadastrar estabelecimentos com dados reais.
-
 - [ ] Ajustar os formulários como a página de cadastro
-
 - [ ] Verificar o serviço [Form Submit](https://formsubmit.co/)
 
 ## Rodar localmente
