@@ -4,6 +4,10 @@
         divItens.insertAdjacentHTML('beforeend', text);
     },
         addItem = function addItem() {
+            if (divItens.childElementCount && !formItems.checkValidity()) {
+                formItems.reportValidity();
+                return;
+            }
             const item = new Item({});
             addHtmlItem(item);
         },

@@ -1,6 +1,10 @@
-# Selecione o estabelecimento
+# Selecione os itens
 
-Aqui você deve selecionar o estabelecimento que irá solicitar a compra
+Aqui você deve selecionar os items que irá solicitar ao estabelecimento selecionado
+
+{% comment %}
+adicionar os dados do estabelecimento
+{% endcomment %}
 
 {% include itens/dados_itens.html %}
 
