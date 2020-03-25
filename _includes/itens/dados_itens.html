@@ -1,18 +1,14 @@
 <script type="text/html" id="tpl-item">
-<fieldset>
-    <legend>Item {id}</legend>
-    <div>
-        <label for="txtItem_{id}">Item:</label>
-        <input type="text" name="txtItem_{id}" id="txtItem_{id}" />
-    </div>
-    <div>
-        <label for="txtQuantidade_{id}">Quantidade:</label>
-        <input type="number" name="txtQuantidade_{id}" id="txtQuantidade_{id}" />
-        <label for="txtUnidade_{id}">Unidade de Medida:</label>
-        <input type="text" name="txtUnidade_{id}" id="txtUnidade_{id}" />
-        <span>g(gramas), kg(kilogramas)</span>
-        <button id="btnRemoverItem_{id}">Remover item</button>
-    </div>
+<fieldset id="fieldset-{id}">
+    <legend><label for="txtItem_{id}">Item</label></legend>
+    <dl>
+        <dd>
+            <input type="text" name="txtItem_{id}" class="form-control" placeholder="Nome do item" required />
+            <input type="number" name="txtQuantidade_{id}" class="form-control" placeholder="Quantidade" required />
+            <input type="text" name="txtUnidade_{id}" class="form-control" placeholder="g(gramas), kg(kilogramas)" required />
+            <button class="remove-item btn btn-secondary mr-2" data-id="{id}">Remover item</button>
+        </dd>
+    </dl>
 </fieldset>
 </script>
 <fieldset>
@@ -21,8 +17,11 @@
     </p>
     <div id="div-itens">
     </div>
-    <br />
-    <button id="btnAddItem">Adicionar item</button>
+    <dl>
+        <dd>
+            <button id="btnAddItem" class="btn btn-primary mr-2">Adicionar item</button>
+        </dd>
+    </dl>
 </fieldset>
 <script>
     const divItens = document.getElementById("div-itens"),

@@ -5,7 +5,13 @@
     },
         addItem = function addItem() {
             const item = new Item({});
-            itemList.push(item);
             addHtmlItem(item);
+        },
+        removeItem = function removeItem(id) {
+            const elem = document.getElementById(`fieldset-${id}`);
+            if (elem) {
+                divItens.removeChild(elem);
+            }
+            !divItens.childElementCount && addItem();
         };
 </script>
