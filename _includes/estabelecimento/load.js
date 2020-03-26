@@ -1,5 +1,6 @@
 window.addEventListener("load", function(event) {
-  fetch("assets/estabelecimentos.json")
+  const url = "{{ '/assets/json/estabelecimentos.json' | relative_url }}";
+  fetch(url)
     .then(r => r.json())
     .then(initEstabelecimentos)
     .then(initCategorias);
