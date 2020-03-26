@@ -1,5 +1,5 @@
 (function() {
-  const url = "{{ '/assets/json/localizacao.json' | prepend: base_url }}",
+  const url = "{{ '/assets/json/localizacao.json' | relative_url }}",
     estados = [],
     insert = function insert(list, select) {
       emptySelect(select);
