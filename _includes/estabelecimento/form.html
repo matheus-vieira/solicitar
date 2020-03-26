@@ -9,6 +9,22 @@
 </script>
 <form id="formEstabelecimento">
     <dl>
+        <dt><label for="txt-estado">Localização</label></dt>
+        <dd>
+            <select name="txt-estado" id="txt-estado" class="form-control" required>
+                <option value="-1" selected="true">Selecione um estado</option>
+                <option value="-1" selected="true">Selecione um estado</option>
+                <option value="-1" selected="true">Selecione um estado</option>
+            </select>
+            <select name="txt-cidade" id="txt-cidade" class="form-control" required>
+                <option value="-1" selected="true">Selecione uma cidade</option>
+            </select>
+            <select name="txt-bairro" id="txt-bairro" class="form-control" required>
+                <option value="-1" selected="true">Selecione um bairro</option>
+            </select>
+        </dd>
+    </dl>
+    <dl>
         <dt><label for="txtEstabelecimentoCategoria">Categoria</label></dt>
         <dd><input type="text" name="txtEstabelecimentoCategoria" id="txtEstabelecimentoCategoria"
                 class="form-control input-block" placeholder="mercado, açougue" required /></dd>
