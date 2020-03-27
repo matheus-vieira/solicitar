@@ -1,34 +1,10 @@
-{% include script_controller.html %}
-
 <script>
-    const Pessoa = function Pessoa(formData) {
-        if (!(this instanceof Pessoa))
-            return new Pessoa(formData);
-
-        const defineProp = function (id) {
-            return {
-                enumerable: true,   // não enumerável
-                configurable: true, // não configurável
-                writable: true,     // não gravável
-                value: formData.get(id)
-            };
-        };
-        Object.defineProperty(this, 'Nome', defineProp('txtNome'));
-        Object.defineProperty(this, 'Celular', defineProp('txtCelular'));
-        Object.defineProperty(this, 'Email', defineProp('txtEmail'));
-    },
-        pessoaController = controller('pessoas', Pessoa);
-
-    document.getElementById("aProx")
-        .addEventListener("click", function (ev) {
-            const form = document.getElementById("formDadosPessoais");
-            const formData = new FormData(form);
-            const pessoa = new Pessoa(formData);
-            try {
-                pessoaController.add(pessoa);
-            } catch (error) {
-                ev.preventDefault();
-                return false;
-            }
-        });
+(function () {
+{% include js/define_prop.js %}
+{% include js/solicitacao.js %}
+{% include js/aProx_click.js %}
+{% include contato/variaveis.js %}
+{% include contato/Pessoa.js %}
+{% include contato/aProxHandler.js %}
+}());
 </script>
