@@ -7,7 +7,7 @@
     <dl>
         <dt><label for="celular">Celular</label></dt>
         <dd><input type="tel" name="celular" id="celular" class="form-control input-block" placeholder="Seu telefone celular"
-                required /></dd>
+                required maxlength="15" pattern="\(?[0-9]{2}\)?\s?[0-9]{4,6}-?[0-9]{3,4}$" title="Preencha com um telefone (99)9999-9999. Parênteses e traço são opicionais."/></dd>
     </dl>
     <dl>
         <dt><label for="email">E-mail</label></dt>
@@ -15,4 +15,3 @@
                 required /></dd>
     </dl>
 </form>
-<br />
