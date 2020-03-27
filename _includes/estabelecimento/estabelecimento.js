@@ -1,6 +1,6 @@
 const Estabelecimento = function Estabelecimento(d) {
     if (!(this instanceof Estabelecimento))
-      return new Estabelecimento(formData);
+      return new Estabelecimento(d);
 
     Object.assign(this, d || {});
     Object.defineProperty(this, "id", defineProp(uuid()));

@@ -1,5 +1,5 @@
 const aProxHandler = function aProxHandler(ev) {
-  const formData = new FormData(form);
-  const pessoa = new Pessoa(formData);
+  const data = getFormData(form);
+  const pessoa = new Pessoa(data);
   solicitacao.addContato(pessoa);
 };
