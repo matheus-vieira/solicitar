@@ -1,11 +1,8 @@
 <script type="text/html" id="tpl-estabelecimento-selecionado">
-<h3>Detalhes do estabelecimento selecionado</h3>
-<div>
-    <strong>Nome: </strong> {Nome}<br />
-    <strong>Telefone: </strong> {Telefone}<br />
-    <strong>Whatsapp (opcional): </strong> {Whatsapp}<br />
-    <strong>Endereço: </strong> {end}<br />
-</div>
+<div><strong>Nome: </strong> {Nome}</div>
+<div><strong>Telefone: </strong> {Telefone}</div>
+<div><strong>Whatsapp (opcional): </strong> {Whatsapp}</div>
+<div><strong>Endereço: </strong> {end}</div>
 </script>
 <form id="formEstabelecimento">
     <dl>
@@ -35,16 +32,15 @@
             </select></dd>
     </dl>
 </form>
-<div id="divDetalhes">
-    <h3>Detalhes do estabelecimento selecionado</h3>
-    <div>
-        <strong>Nome: </strong> <br />
-        <strong>Telefone: </strong> <br />
-        <strong>Whatsapp (opcional): </strong><br />
-        <strong>Endereço: </strong><br />
-    </div>
-</div>
-<br />
+
+<h3>Detalhes do estabelecimento selecionado</h3>
+<dl id="divDetalhes">
+    <div><strong>Nome: </strong></div>
+    <div><strong>Telefone: </strong></div>
+    <div><strong>Whatsapp (opcional):</strong></div>
+    <div><strong>Endereço: </strong></div>
+</dl>
+
 <script>
     const estabelecimentoSelecionadoTpl = document.getElementById("tpl-estabelecimento-selecionado").innerHTML,
         divDetalhes = document.getElementById("divDetalhes"),
