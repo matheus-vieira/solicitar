@@ -26,18 +26,18 @@ Confirme os dados do estabelecimento.
 
 - [ ] Usar localização para filtrar os estabelecimentos.
 - [ ] Filtrar por categoria(s).
-- [ ] Salvar o estabelecimento selecionando.
+- [X] Salvar o estabelecimento selecionando.
 - [X] Adicionar itens.
 - [X] Remover itens.
-- [ ] Salvar itens na solicitação de compra
-- [ ] Enviar a solicitação de compra
+- [X] Salvar itens na solicitação de compra
+- [ ] Pagina de envio da solicitação de compra
 - [ ] Cadastrar estabelecimentos com dados reais.
 - [ ] Ajustar os formulários como a página de cadastro
   - [X] Seus dados
-  - [ ] Estabelecimento
+  - [X] Estabelecimento
   - [X] Itens
   - [ ] Eviar solicitação de compra
-- [ ] Verificar o serviço [Form Submit](https://formsubmit.co/)
+- [X] Verificar o serviço [Form Submit](https://formsubmit.co/)
 
 ## Rodar localmente
 
