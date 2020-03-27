@@ -6,6 +6,10 @@ Seus dados serão armazenados apenas neste computador e não serão disponibiliz
 
 Caso esteja utilizando um computador público recomenda-se utilizar o modo privado do navegador ou após a utilização limpar os dados do navegador.
 
+environment {{ jekyll.environment }}
+
+url {{ absolute_url }}
+
 {% include contato/form.html %}
 
 [Voltar]({{ '/' | prepend: site.baseurl }}) | [Selecione o estabelecimento]({{ '/estabelecimento' | prepend: site.baseurl }}){: #aProx }

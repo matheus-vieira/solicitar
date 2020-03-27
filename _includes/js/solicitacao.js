@@ -1,9 +1,10 @@
 const solicitacao = (function Solicitacao(d) {
   const storageKey = "solicitcao",
+    storage = sessionStorage,
     solicitcaoObj = Object.create(null, {});
 
   const getSolicitacao = function getSolicitacao() {
-    const solicitcaoStr = localStorage.getItem(storageKey);
+    const solicitcaoStr = storage.getItem(storageKey);
 
     if (solicitcaoStr) Object.assign(solicitcaoObj, JSON.parse(solicitcaoStr));
 
@@ -12,7 +13,7 @@ const solicitacao = (function Solicitacao(d) {
 
   const updateStorage = function updateStorage() {
     const str = JSON.stringify(solicitcaoObj);
-    localStorage.setItem(storageKey, str);
+    storage.setItem(storageKey, str);
   };
 
   const change = function change(value) {
