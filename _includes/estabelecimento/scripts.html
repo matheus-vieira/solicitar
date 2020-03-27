@@ -1,16 +1,5 @@
-{% include estabelecimento/option_template.html %}
-<script>
-(function () {
-{% include js/controller.js %}
-{% include js/define_prop.js %}
-{% include js/guid.js %}
-{% include js/supplant.js %}
-{% include js/insertAdjacent.js %}
-{% include js/emptySelect.js %}
-{% include estabelecimento/variables.js %}
-{% include estabelecimento/localizacao.js %}
-{% include estabelecimento/categoria.js %}
-{% include estabelecimento/estabelecimento.js %}
-{% include estabelecimento/load.js %}
-}());
-</script>
+{% capture scripts %}
+  {% include estabelecimento/main.js %}
+{% endcapture %}
+
+<script>{{ scripts | uglify | strip }}</script>

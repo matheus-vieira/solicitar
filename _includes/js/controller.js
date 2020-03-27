@@ -33,6 +33,7 @@ const controller = function controller(key, obj) {
       value: function(newList) {
         updateStorage(newList);
         getStorage();
+        return list;
       }
     },
     count: {

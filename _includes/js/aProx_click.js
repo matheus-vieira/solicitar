@@ -1,8 +1,18 @@
-document.getElementById("aProx").addEventListener("click", function(ev) {
-  if (!form.checkValidity()) {
+const aProxClickHandler = function aProxClickHandler(ev) {
+  if (form && !form.checkValidity()) {
     ev.preventDefault();
     form.reportValidity();
     return false;
   }
-  aProxHandler(ev);
-}, false);
+
+  try {
+    aProxHandler(ev);
+  } catch (error) {
+    ev.preventDefault();
+    console.error(error);
+    return false;
+  }
+};
+document
+  .getElementById("aProx")
+  .addEventListener("click", aProxClickHandler, false);

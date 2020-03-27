@@ -8,27 +8,27 @@
     <dl>
         <dt><label for="txt-estado">Localização</label></dt>
         <dd>
-            <select name="txt-estado" id="txt-estado" class="form-control" required>
-                <option value="-1" selected="true">Selecione um estado</option>
+            <select name="txt-estado" id="txt-estado" class="form-control">
+                <option value="" selected="true">Selecione um estado</option>
             </select>
-            <select name="txt-cidade" id="txt-cidade" class="form-control" required>
-                <option value="-1" selected="true">Selecione uma cidade</option>
+            <select name="txt-cidade" id="txt-cidade" class="form-control">
+                <option value="" selected="true">Selecione uma cidade</option>
             </select>
-            <select name="txt-bairro" id="txt-bairro" class="form-control" required>
-                <option value="-1" selected="true">Selecione um bairro</option>
+            <select name="txt-bairro" id="txt-bairro" class="form-control">
+                <option value="" selected="true">Selecione um bairro</option>
             </select>
         </dd>
     </dl>
     <dl>
         <dt><label for="txtEstabelecimentoCategoria">Categoria</label></dt>
         <dd><input type="text" name="txtEstabelecimentoCategoria" id="txtEstabelecimentoCategoria"
-                class="form-control input-block" placeholder="mercado, açougue" required /></dd>
+                class="form-control input-block" placeholder="mercado, açougue" /></dd>
     </dl>
     <dl>
-        <dt><label for="txtEstabelecimentoNome">Estabelecimento</label></dt>
+        <dt><label for="txt-estabelecimento">Estabelecimento</label></dt>
         <dd>
-            <select name="txtEstabelecimentoNome" id="txtEstabelecimentoNome" class="form-control input-block" required>
-                <option value="-1" selected="true">Selecione um estabelecimento</option>
+            <select name="txt-estabelecimento" id="txt-estabelecimento" class="form-control input-block" required>
+                <option value="">Selecione um estabelecimento</option>
             </select></dd>
     </dl>
 </form>
@@ -40,9 +40,3 @@
     <div><strong>Whatsapp (opcional):</strong></div>
     <div><strong>Endereço: </strong></div>
 </dl>
-
-<script>
-    const estabelecimentoSelecionadoTpl = document.getElementById("tpl-estabelecimento-selecionado").innerHTML,
-        divDetalhes = document.getElementById("divDetalhes"),
-        formEstabelecimento = document.getElementById("formEstabelecimento");
-</script>

@@ -21,10 +21,12 @@ const solicitacao = (function Solicitacao(d) {
     updateStorage();
   };
 
+  getSolicitacao();
+  
   return Object.create(null, {
     addContato: defineProp(c => change({ contato: c })),
     addEstabelecimento: defineProp(e => change({ estabelecimento: e })),
     addItens: defineProp(i => change({ itens: i })),
     getSolicitacao: defineProp(getSolicitacao)
   });
-}());
+})();

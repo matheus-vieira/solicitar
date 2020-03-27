@@ -1,0 +1,16 @@
+(function () {
+{% include js/domHelpers.js %}
+{% include js/controller.js %}
+{% include js/define_prop.js %}
+{% include js/guid.js %}
+{% include js/supplant.js %}
+{% include js/insertAdjacent.js %}
+{% include js/emptySelect.js %}
+{% include js/solicitacao.js %}
+{% include js/aProx_click.js %}
+{% include estabelecimento/Estabelecimento.js %}
+{% include estabelecimento/variables.js %}
+{% include estabelecimento/aProxHandler.js %}
+{% include estabelecimento/localizacao.js %}
+{% include estabelecimento/load.js %}
+}());
