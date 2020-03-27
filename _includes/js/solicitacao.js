@@ -26,4 +26,4 @@ const solicitacao = (function Solicitacao(d) {
     addItens: defineProp(i => change({ itens: i })),
     getSolicitacao: defineProp(getSolicitacao)
   });
-})();
+}());
