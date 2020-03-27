@@ -1,0 +1,17 @@
+(function () {
+{% include js/controller.js %}
+{% include js/define_prop.js %}
+{% include js/guid.js %}
+{% include js/supplant.js %}
+{% include js/insertAdjacent.js %}
+{% include js/addHtml.js %}
+{% include js/domHelpers.js %}
+{% include js/get_formData.js %}
+{% include js/solicitacao.js %}
+{% include js/aProx_click.js %}
+{% include itens/Item.js %}
+{% include itens/variaveis.js %}
+{% include itens/item_iteraction.js %}
+{% include itens/aProxHandler.js %}
+{% include itens/load.js %}
+}());
