@@ -13,6 +13,14 @@ window.addEventListener("load", function(event) {
       const categs = Array.from(new Set(list.flatMap(e => e.Categoria)));
       categoriasController.refresh(categs);
       return list;
+    })
+    .then(list => {
+      const estabelecimento = solicitacao.getEstabelecimento();
+      if (estabelecimento) {
+        const filtrado = estabelecimentoController.getAll("Nome", estabelecimento.Nome);
+        const selecionado = (filtrado || [])[0];
+        txtEstabelecimento.value = selecionado.id;
+      }
     });
 });
 txtEstabelecimento.addEventListener("change", function name(ev) {
