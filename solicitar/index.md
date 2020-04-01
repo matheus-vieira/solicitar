@@ -2,12 +2,14 @@
 
 Aqui estáo seu resumo de compra
 
-> Seus dados
-> Estabelecimento
-> Items a solicitar
+{% include solicitar/contato.html %}
 
-Encaminhar
+{% include solicitar/estabelecimento.html %}
 
-[Whatsapp](link)
+{% include solicitar/itens.html %}
 
-[E-mail](mailto:mail@mail.com)
+## Encaminhar
+
+[Whatsapp]({{ '/obrigado/' | absolute_url }}){: #aWhatsapp } | [E-mail]({{ '/obrigado/' | absolute_url }}){: #aEmail }
+
+{% include solicitar/scripts.html %}

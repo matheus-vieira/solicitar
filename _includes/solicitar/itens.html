@@ -1,0 +1,22 @@
+<script type="text/html" id="itens-data-tpl">
+<div class="Box-row">
+    <strong>Item {idx}: </strong>
+    <span id="item-quantidade">{quantidade}</span>
+    <span id="item-unidade">{unidade}</span>
+    de
+    <span id="item-nome">{nome}</span>
+</div>
+</script>
+<dl class="Box Box--condensed">
+    <div class="Box-header">
+        Itens solicitados
+    </div>
+    <div class="Box Box--condensed">
+        <div id="itens-data">
+            <div class="Box-row"><strong>Sem itens selecionados</strong></div>
+        </div>
+    </div>
+    <div class="Box-footer">
+        <a href="{{ '/itens' | prepend: site.baseurl }}">Editar Itens</a>
+    </div>
+</dl>

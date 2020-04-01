@@ -1,0 +1,7 @@
+{% capture scripts %}
+(function () {
+{% include solicitar/main.html %}
+}());
+{% endcapture %}
+
+<script>{{ scripts | uglify | strip }}</script>

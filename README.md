@@ -30,13 +30,15 @@ Confirme os dados do estabelecimento.
 - [X] Adicionar itens.
 - [X] Remover itens.
 - [X] Salvar itens na solicitação de compra
-- [ ] Pagina de envio da solicitação de compra
+- [X] Pagina de envio da solicitação de compra
+  - [ ] Envio da solicitação por whatsapp
+  - [ ] Envio da solicitação por e-mail
 - [ ] Cadastrar estabelecimentos com dados reais.
-- [ ] Ajustar os formulários como a página de cadastro
+- [X] Ajustar os formulários como a página de cadastro
   - [X] Seus dados
   - [X] Estabelecimento
   - [X] Itens
-  - [ ] Eviar solicitação de compra
+  - [X] Eviar solicitação de compra
 - [X] Verificar o serviço [Form Submit](https://formsubmit.co/)
 
 ## Rodar localmente

@@ -27,6 +27,9 @@ const solicitacao = (function Solicitacao(d) {
     addContato: defineProp(c => change({ contato: c })),
     addEstabelecimento: defineProp(e => change({ estabelecimento: e })),
     addItens: defineProp(i => change({ itens: i })),
-    getSolicitacao: defineProp(getSolicitacao)
+    getSolicitacao: defineProp(getSolicitacao),
+    getContato: defineProp(() => getSolicitacao().contato),
+    getEstabelecimento: defineProp(() => getSolicitacao().estabelecimento),
+    getItens: defineProp(() => getSolicitacao().itens)
   });
 })();

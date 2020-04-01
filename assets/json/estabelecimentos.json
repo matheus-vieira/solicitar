@@ -1,6 +1,7 @@
 [
     {
         "Nome": "Mercado Bizzoto",
+        "Email": "contato@bizzoto.com.br",
         "Telefone": "41988024599",
         "Whatsapp": "41988024599",
         "Endereço": {
@@ -13,6 +14,7 @@
     },
     {
         "Nome": "Supermercado condor",
+        "Email": "contato@condor.com.br",
         "Telefone": "4138882213",
         "Whatsapp": "",
         "Endereço": {

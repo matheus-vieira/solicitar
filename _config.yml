@@ -13,6 +13,7 @@ repository: matheus-vieira/solicitacao-compra
 github: [metadata]
 
 incremental: true
+port: 8081
 host: 0.0.0.0
 
 # Fill in your Google Analytics ID to track your website using GA
@@ -20,6 +21,7 @@ host: 0.0.0.0
 
 author:
   name: Matheus Costa Vieira
+  email: matheus.costa.vieira@gmail.com
 
 plugins:
   - jekyll-github-metadata

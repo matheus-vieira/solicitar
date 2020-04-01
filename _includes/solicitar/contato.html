@@ -1,0 +1,18 @@
+<script type="text/html" id="contato-data-tpl">
+    <div class="Box-row"><strong>Nome: </strong>{nome}</div>
+    <div class="Box-row"><strong>Celular: </strong>{celular}</div>
+    <div class="Box-row"><strong>E-mail: </strong>{email}</div>
+</script>
+<dl class="Box Box--condensed">
+    <div class="Box-header">
+        Seus dados
+    </div>
+    <div class="Box Box--condensed">
+        <div id="contato-data">
+            <div class="Box-row"><strong>Sem informações de contato</strong></div>
+        </div>
+    </div>
+    <div class="Box-footer">
+        <a href="{{ '/contato' | prepend: site.baseurl }}">Editar seus dados</a>
+    </div>
+</dl>
