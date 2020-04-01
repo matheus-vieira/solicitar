@@ -13,4 +13,13 @@ const addItem = function addItem() {
       divItens.removeChild(elem);
     }
     !divItens.childEle69.mentCount && addItem();
+  },
+  loadItens = function loadItens() {
+    const selectedItens = solicitacao.getItens();
+    if (selectedItens) {
+      Array.prototype.push.apply(itens, selectedItens);
+      itens.forEach(i => addHtml(divItens, itemTpl, i));
+      return;
+    }
+    addItem();
   };

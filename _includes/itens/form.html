@@ -1,9 +1,9 @@
 <script type="text/html" id="tpl-item">
 <div id="{id}" class="Box-body">
     <label for="nome_{id}">Item: </label>
-    <input type="text" name="nome_{id}" class="form-control" placeholder="Nome do item" required />
-    <input type="number" name="quantidade_{id}" class="form-control" placeholder="Quantidade" required />
-    <input type="text" name="unidade_{id}" class="form-control" placeholder="g(gramas), kg(kilogramas)" required />
+    <input type="text" name="nome_{id}" class="form-control" placeholder="Nome do item" value="{nome}" required />
+    <input type="number" name="quantidade_{id}" class="form-control" placeholder="Quantidade" value="{quantidade}" required />
+    <input type="text" name="unidade_{id}" class="form-control" placeholder="g(gramas), kg(kilogramas)" value="{unidade}" required />
     <button class="remove-item btn btn-sm btn-danger" data-id="{id}">Remover item</button>
 </div>
 </script>

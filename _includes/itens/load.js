@@ -1,4 +1,4 @@
-window.addEventListener("load", addItem);
+window.addEventListener("load", loadItens);
 document.getElementById("btnAddItem").addEventListener("click", addItem, false);
 document.addEventListener(
   "click",
