@@ -9,6 +9,7 @@
 {% include js/get_formData.js %}
 {% include js/solicitacao.js %}
 {% include js/aProx_click.js %}
+{% include js/aPrev_click.js %}
 {% include itens/Item.js %}
 {% include itens/variaveis.js %}
 {% include itens/item_iteraction.js %}

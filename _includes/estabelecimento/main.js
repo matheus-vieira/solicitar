@@ -8,6 +8,7 @@
 {% include js/emptySelect.js %}
 {% include js/solicitacao.js %}
 {% include js/aProx_click.js %}
+{% include js/aPrev_click.js %}
 {% include estabelecimento/Estabelecimento.js %}
 {% include estabelecimento/variables.js %}
 {% include estabelecimento/aProxHandler.js %}

@@ -8,4 +8,4 @@ Em algum momento isso será automatizado.
 
 {% include cadastro/form.html %}
 
-[Voltar]({{ '/' | prepend: site.baseurl }}) |
+[Voltar](javascript:history.back()){: #aPrev} |

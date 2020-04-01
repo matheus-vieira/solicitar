@@ -8,6 +8,6 @@ Caso esteja utilizando um computador público recomenda-se utilizar o modo priva
 
 {% include contato/form.html %}
 
-[Voltar]({{ '/' | prepend: site.baseurl }}) | [Selecione o estabelecimento]({{ '/estabelecimento' | prepend: site.baseurl }}){: #aProx }
+[Voltar](javascript:history.back()){: #aPrev} | [Selecione o estabelecimento]({{ '/estabelecimento' | prepend: site.baseurl }}){: #aProx }
 
 {% include contato/scripts.html %}

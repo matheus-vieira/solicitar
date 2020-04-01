@@ -12,6 +12,6 @@ Preencha os itens conforme a sua necessidade
 
 {% include itens/form.html %}
 
-[Voltar]({{ '/estabelecimento' | prepend: site.baseurl }}) | [Solicitar]({{ '/solicitar' | prepend: site.baseurl }}){: #aProx }
+[Voltar](javascript:history.back()){: #aPrev} | [Solicitar]({{ '/solicitar' | prepend: site.baseurl }}){: #aProx }
 
 {% include itens/scripts.html %}
