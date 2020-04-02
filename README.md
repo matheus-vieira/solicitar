@@ -1,6 +1,12 @@
 # Solicitação de Compras
 
-O projeto tem como objetivo manter as pessoas em quarentena. Os profissionais da saúde recomendam que fiquemos em reclusão por um período indeterminado com o intuito de achatar a curva de contágio do corona vírus (COVID 19), toda ajuda (alteração de layout, revisão de texto, adição de estabelecimento e etc) é bem vinda.
+Os profissionais da saúde recomendam que fiquemos em reclusão por um período indeterminado com o intuito de achatar a curva de contágio do corona vírus (COVID 19).
+
+Este projeto tem como objetivo manter as pessoas em quarentena.
+
+Toda ajuda (alteração de layout, revisão de texto, adição de estabelecimento e etc) é bem vinda.
+
+No momento o crucial é a adição de estabelecimentos.
 
 Faça seu pull request!
 
@@ -26,20 +32,7 @@ Confirme os dados do estabelecimento.
 
 - [ ] Usar localização para filtrar os estabelecimentos.
 - [ ] Filtrar por categoria(s).
-- [X] Salvar o estabelecimento selecionando.
-- [X] Adicionar itens.
-- [X] Remover itens.
-- [X] Salvar itens na solicitação de compra
-- [X] Pagina de envio da solicitação de compra
-  - [ ] Envio da solicitação por whatsapp
-  - [ ] Envio da solicitação por e-mail
 - [ ] Cadastrar estabelecimentos com dados reais.
-- [X] Ajustar os formulários como a página de cadastro
-  - [X] Seus dados
-  - [X] Estabelecimento
-  - [X] Itens
-  - [X] Eviar solicitação de compra
-- [X] Verificar o serviço [Form Submit](https://formsubmit.co/)
 
 ## Rodar localmente
 
