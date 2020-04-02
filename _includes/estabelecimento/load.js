@@ -1,7 +1,16 @@
 window.addEventListener("load", function(event) {
-  const url = "{{ '/assets/json/estabelecimentos.json' | relative_url }}";
-  fetch(url)
+  const url = "{{ 'assets/json/estabelecimentos.json' | relative_url }}";
+  fetch(url, { cache: "no-cache" })
     .then(r => r.json())
+    .then(r => {
+      const list = [];
+      for (const key in r) {
+        if (r.hasOwnProperty(key)) {
+          list.push(r[key]);
+        }
+      }
+      return list;
+    })
     .then(list => {
       estabelecimentoController.refresh(list).forEach(e => {
         const text = optionTpl.supplant(e);
@@ -17,9 +26,12 @@ window.addEventListener("load", function(event) {
     .then(list => {
       const estabelecimento = solicitacao.getEstabelecimento();
       if (estabelecimento) {
-        const filtrado = estabelecimentoController.getAll("Nome", estabelecimento.Nome);
-        const selecionado = (filtrado || [])[0];
-        txtEstabelecimento.value = selecionado.id;
+        const filtrado = estabelecimentoController.getAll(
+          "Nome",
+          estabelecimento.Nome
+        );
+        const selecionado = filtrado[0];
+        selecionado && (txtEstabelecimento.value = selecionado.id);
       }
     });
 });

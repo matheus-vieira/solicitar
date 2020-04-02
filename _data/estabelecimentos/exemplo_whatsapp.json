@@ -1,0 +1,17 @@
+{
+    "Nome": "Estabelecimento Com Whattsapp",
+    "Email": "",
+    "Telefone": "5541988024599",
+    "Whatsapp": "5541988024599",
+    "Endereço": {
+        "logradouro": "Rua Teste, 3157",
+        "Bairro": "Sítio Cercado",
+        "Cidade": "Curitiba",
+        "Uf": "PR"
+    },
+    "Categoria": [
+        "mercado",
+        "padaria",
+        "açougue"
+    ]
+}
