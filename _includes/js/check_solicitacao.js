@@ -1,10 +1,10 @@
-const checkSolicitacao = function checkSolicitacao(sol) {
+const checkSolicitacao = function checkSolicitacao(sol, prop = "Whatsapp") {
   if (
     !sol ||
     !sol.contato ||
     !sol.contato.nome ||
     !sol.estabelecimento ||
-    !sol.estabelecimento.Whatsapp ||
+    !sol.estabelecimento[prop] ||
     !sol.itens ||
     !sol.itens.length
   )
