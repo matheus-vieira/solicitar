@@ -1,7 +1,7 @@
 const aWhatsappHandler = function aWhatsappHandler(ev) {
     try {
       const sol = solicitacao.getSolicitacao();
-      if (!sol || !sol.estabelecimento || !sol.estabelecimento.Whatsapp) return;
+      checkSolicitacao(sol);
       this.target = "_blank";
       this.href = `https://api.whatsapp.com/send?phone={whatsapp}&text={message}`.supplant(
         buildWhatsappObject(sol)
@@ -13,8 +13,6 @@ const aWhatsappHandler = function aWhatsappHandler(ev) {
     }
   },
   buildWhatsappItens = function buildItens(sol) {
-    checkSolicitacao(sol);
-
     return sol.itens
       .map((e, i) =>
         "Item {idx}: {quantidade} {unidade} de {nome}".supplant(
@@ -24,8 +22,6 @@ const aWhatsappHandler = function aWhatsappHandler(ev) {
       .join("\r\n");
   },
   buildWhatsappMessage = function buildWhatsappMessage(sol) {
-    checkSolicitacao(sol);
-
     return encodeURI(
       `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
 
@@ -38,23 +34,10 @@ Obrigado.`.supplant({
     );
   },
   buildWhatsappObject = function(sol) {
-    checkSolicitacao(sol);
-
     return Object.create(null, {
       whatsapp: defineProp(sol.estabelecimento.Whatsapp),
       message: defineProp(buildWhatsappMessage(sol))
     });
-  }, checkSolicitacao = function checkSolicitacao(sol) {
-    if (
-      !sol ||
-      !sol.contato ||
-      !sol.contato.nome ||
-      !sol.estabelecimento ||
-      !sol.estabelecimento.Whatsapp ||
-      !sol.itens ||
-      !sol.itens.length
-    )
-      throw new Error("informações faltantes");
   };
 
 aWhatsapp.addEventListener("click", aWhatsappHandler, false);
