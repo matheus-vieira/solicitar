@@ -12,11 +12,10 @@ const aWhatsappHandler = function aWhatsappHandler(ev) {
       return false;
     }
   },
-  buildWhatsappItens = function buildItens(itens) {
-    if (!itens && !itens.length) {
-      throw new Error("informações faltantes");
-    }
-    return itens
+  buildWhatsappItens = function buildItens(sol) {
+    checkSolicitacao(sol);
+
+    return sol.itens
       .map((e, i) =>
         "Item {idx}: {quantidade} {unidade} de {nome}".supplant(
           Object.assign(e, { idx: i + 1 })
@@ -25,33 +24,37 @@ const aWhatsappHandler = function aWhatsappHandler(ev) {
       .join("\r\n");
   },
   buildWhatsappMessage = function buildWhatsappMessage(sol) {
-    if (!sol || !sol.contato || !sol.contato.nome || !sol.itens)
-      throw new Error("informações faltantes");
+    checkSolicitacao(sol);
 
-    return encodeURI(`Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
+    return encodeURI(
+      `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
 
 {itens}
 
 Obrigado.`.supplant({
-      nome: sol.contato.nome,
-      itens: buildWhatsappItens(sol.itens)
-    }));
+        nome: sol.contato.nome,
+        itens: buildWhatsappItens(sol)
+      })
+    );
   },
   buildWhatsappObject = function(sol) {
-    if (
-      !sol ||
-      !sol.contato ||
-      !sol.estabelecimento ||
-      !sol.estabelecimento.Whatsapp ||
-      !sol.itens
-    )
-      throw new Error("informações faltantes");
+    checkSolicitacao(sol);
 
     return Object.create(null, {
       whatsapp: defineProp(sol.estabelecimento.Whatsapp),
       message: defineProp(buildWhatsappMessage(sol))
     });
+  }, checkSolicitacao = function checkSolicitacao(sol) {
+    if (
+      !sol ||
+      !sol.contato ||
+      !sol.contato.nome ||
+      !sol.estabelecimento ||
+      !sol.estabelecimento.Whatsapp ||
+      !sol.itens ||
+      !sol.itens.length
+    )
+      throw new Error("informações faltantes");
   };
-document
-  .getElementById("aWhatsapp")
-  .addEventListener("click", aWhatsappHandler, false);
+
+aWhatsapp.addEventListener("click", aWhatsappHandler, false);
