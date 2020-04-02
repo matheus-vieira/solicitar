@@ -3,7 +3,7 @@ const buildEstabelecimento = function(ev) {
   if (data) {
     const toRemove = estabelecimentoDataHolder.querySelector(".Box-row");
     estabelecimentoDataHolder.removeChild(toRemove);
-    addHtml(estabelecimentoDataHolder, estabelecimentoDataTpl, data)
+    addHtml(estabelecimentoDataHolder, estabelecimentoDataTpl, data);
   }
 };
 window.addEventListener("load", buildEstabelecimento);

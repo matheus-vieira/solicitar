@@ -11,9 +11,8 @@ const aEmailHandler = function aEmailHandler(ev) {
     console.log("email handler");
     const sol = solicitacao.getSolicitacao();
     if (!sol || !sol.contato || !sol.estabelecimento || !sol.itens)
-        throw new Error("informações faltantes");
-    
-    
+      throw new Error("informações faltantes");
+
     throw new Error("email");
   } catch (error) {
     ev.preventDefault();
@@ -21,6 +20,4 @@ const aEmailHandler = function aEmailHandler(ev) {
     return false;
   }
 };
-document
-  .getElementById("aEmail")
-  .addEventListener("click", aEmailHandler, false);
+aEmail.addEventListener("click", aEmailHandler, false);

@@ -2,15 +2,19 @@
     {
         "Nome": "Mercado Bizzoto",
         "Email": "contato@bizzoto.com.br",
-        "Telefone": "41988024599",
-        "Whatsapp": "41988024599",
+        "Telefone": "5541988024599",
+        "Whatsapp": "5541987237281",
         "Endereço": {
             "logradouro": "Rua Ourizona, 3157",
             "Bairro": "Sítio Cercado",
             "Cidade": "Curitiba",
             "Uf": "PR"
         },
-        "Categoria": ["mercado", "padaria", "açougue"]
+        "Categoria": [
+            "mercado",
+            "padaria",
+            "açougue"
+        ]
     },
     {
         "Nome": "Supermercado condor",
@@ -23,6 +27,10 @@
             "Cidade": "Curitiba",
             "Uf": "PR"
         },
-        "Categoria": ["mercado", "padaria", "açougue"]
+        "Categoria": [
+            "mercado",
+            "padaria",
+            "açougue"
+        ]
     }
 ]
