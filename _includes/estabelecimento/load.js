@@ -1,6 +1,7 @@
 window.addEventListener("load", function(event) {
-  const url = "{{ 'assets/json/estabelecimentos.json' | relative_url }}";
-  fetch(url, { cache: "no-cache" })
+  fetch("{{ 'assets/json/estabelecimentos.json' | relative_url }}", {
+    cache: "no-cache"
+  })
     .then(r => r.json())
     .then(r => {
       const list = [];
@@ -19,11 +20,6 @@ window.addEventListener("load", function(event) {
       return list;
     })
     .then(list => {
-      const categs = Array.from(new Set(list.flatMap(e => e.Categoria)));
-      categoriasController.refresh(categs);
-      return list;
-    })
-    .then(list => {
       const estabelecimento = solicitacao.getEstabelecimento();
       if (estabelecimento) {
         const filtrado = estabelecimentoController.getAll(
@@ -34,6 +30,12 @@ window.addEventListener("load", function(event) {
         selecionado && (txtEstabelecimento.value = selecionado.id);
       }
     });
+
+  fetch("{{ 'assets/json/categorias.json' | relative_url }}", {
+    cache: "no-cache"
+  })
+    .then(r => r.json())
+    .then(categoriasController.refresh);
 });
 txtEstabelecimento.addEventListener("change", function name(ev) {
   const estabelecimento = estabelecimentoController.get("id", this.value);
