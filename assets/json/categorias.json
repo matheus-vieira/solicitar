@@ -1,0 +1,9 @@
+---
+permalink: /assets/json/categorias.json
+---
+{% assign categorias = "" | split: "," %}
+{% for item in site.data.estabelecimentos %}
+{% assign categoria = item[1]["Categoria"] %}
+{% assign categorias = categorias | concat: categoria %}
+{% endfor %}
+{{ categorias | flatten | uniq | jsonify }}

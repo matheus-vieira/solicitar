@@ -2,4 +2,4 @@
 permalink: /assets/json/estabelecimentos.json
 ---
 
-{{ site.data.estabelecimentos | jsonify }}
+{{ site.data.estabelecimentos | flatten | jsonify }}
