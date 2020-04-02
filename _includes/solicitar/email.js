@@ -15,23 +15,17 @@ const aEmailHandler = function aEmailHandler(ev) {
     }
   },
   buildEmailItens = function buildEmailItens(sol) {
-    return sol.itens
-      .map((e, i) =>
-        "Item {idx}: {quantidade} {unidade} de {nome}".supplant(
-          Object.assign(e, { idx: i + 1 })
-        )
-      )
-      .join("\r\n");
+    return sol.itens.forEach((e, i) =>
+      addHtml(formEmail, hiddenItemTpl, Object.assign(e, { idx: i + 1 }))
+    );
   },
   buildEmailMessage = function buildEmailMessage(sol) {
-    return `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
-
-    {itens}
-    
-    Obrigado.`.supplant({
-      nome: sol.contato.nome,
-      itens: buildEmailItens(sol)
-    });
+    return `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):`.supplant(
+      {
+        nome: sol.contato.nome,
+        itens: buildEmailItens(sol)
+      }
+    );
   },
   buildEmailObject = function(sol) {
     return Object.create(null, {

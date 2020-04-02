@@ -1,12 +1,16 @@
+<script type="text/html" id="hidden-item-tpl">
+<input type="hidden" name="Item {idx}" value="{quantidade} {unidade} de {nome}" />
+</script>
 <form id="form-email" action="https://formsubmit.co/" method="POST">
+    {% if jekyll.environment == "production" %}
+        <input type="hidden" name="_next" value="{{ '/obrigado/' | absolute_url }}" />
+    {% else %}
+        <input type="hidden" name="_next" value="http://localhost:8081/obrigado/" />
+    {% endif %}
     <input type="hidden" name="_subject" value="Solicitação de Compra" />
     <input type="hidden" name="_cc" value="{{ site.author.email }}" />
-{% if jekyll.environment == "production" %}
-    <input type="hidden" name="_next" value="{{ '/obrigado/' | absolute_url }}" />
-{% else %}
-    <input type="hidden" name="_next" value="http://localhost:8081/obrigado/" />
-{% endif %}
     <input type="hidden" name="_template" value="box" />
+    <input type="text" name="_honey" style="display:none">
     <input type="hidden" id="email" name="email" value="{contatoEmail}" />
     <input type="hidden" id="message" name="message" value="{message}" />
 </form>
