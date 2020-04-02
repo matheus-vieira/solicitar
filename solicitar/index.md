@@ -10,6 +10,8 @@ Aqui estáo seu resumo de compra
 
 ## Encaminhar
 
-[Whatsapp](javascript:alert("Estabelecimento não possui número de whatsapp")){: #aWhatsapp title="Encaminhe a solicitação pelo applicativo Whatsapp"} | [E-mail]({{ '/obrigado/' | absolute_url }}){: #aEmail }
+{% include solicitar/email_form.html %}
+
+[Whatsapp](javascript:alert("Estabelecimento não possui número de whatsapp")){: #aWhatsapp title="Encaminhe a solicitação pelo applicativo Whatsapp"} | [E-mail](javascript:alert("Estabelecimento não possui endereço de e-mail")){: #aEmail }
 
 {% include solicitar/scripts.html %}

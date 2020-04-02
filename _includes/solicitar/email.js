@@ -1,12 +1,15 @@
 const aEmailHandler = function aEmailHandler(ev) {
+    ev.preventDefault();
     try {
       const sol = solicitacao.getSolicitacao();
       checkSolicitacao(sol, "Email");
       const emailObj = buildEmailObject(sol);
-
-      fetch(emailObj.link, { method: "post", body: emailObj.body });
+      formEmail.action = formEmail.action + emailObj.estabelecimentoEmail;
+      email.value = emailObj.contatoEmail;
+      message.value = emailObj.message;
+      formEmail.submit();
+      return true;
     } catch (error) {
-      ev.preventDefault();
       console.error(error);
       return false;
     }
@@ -20,31 +23,21 @@ const aEmailHandler = function aEmailHandler(ev) {
       )
       .join("\r\n");
   },
-  buildEmailbody = function buildEmailMessage(sol) {
-    return {
-      _subject: "Solicitação de Compra",
-      _cc: "{{ site.author.email }}",
-/*{% if jekyll.environment == "production" %}*/
-      _next: "{{ '/obrigado/' | absolute_url }}",
-/*{% else %}*/
-      _next: "http://localhost:8081/obrigado/",
-/*{% endif %}*/
-      _template: "box",
-      email: sol.contato.email,
-      message: `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
+  buildEmailMessage = function buildEmailMessage(sol) {
+    return `Olá, me chamo {nome} e gostaria de solicitar o(s) seguinte(s) item(ns):
 
-{itens}
-
-Obrigado.`.supplant({
-        nome: sol.contato.nome,
-        itens: buildEmailItens(sol)
-      })
-    };
+    {itens}
+    
+    Obrigado.`.supplant({
+      nome: sol.contato.nome,
+      itens: buildEmailItens(sol)
+    });
+  },
+  buildEmailObject = function(sol) {
+    return Object.create(null, {
+      estabelecimentoEmail: defineProp(sol.estabelecimento.Email),
+      contatoEmail: defineProp(sol.contato.email),
+      message: defineProp(buildEmailMessage(sol))
+    });
   };
-buildEmailObject = function(sol) {
-  return Object.create(null, {
-    link: defineProp(`https://formsubmit.co/` + sol.estabelecimento.Email),
-    body: defineProp(buildEmailbody(sol))
-  });
-};
 aEmail.addEventListener("click", aEmailHandler, false);

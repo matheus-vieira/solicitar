@@ -1,5 +1,8 @@
 const aWhatsapp = byId("aWhatsapp"),
   aEmail = byId("aEmail"),
+  formEmail = byId("form-email"),
+  email = byId("email"),
+  message = byId("message"),
   contatoDataTpl = tpl("contato-data-tpl"),
   itensDataTpl = tpl("itens-data-tpl"),
   estabelecimentoDataTpl = tpl("estabelecimento-data-tpl"),

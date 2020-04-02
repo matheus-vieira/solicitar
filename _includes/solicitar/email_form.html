@@ -1,0 +1,12 @@
+<form id="form-email" action="https://formsubmit.co/" method="POST">
+    <input type="hidden" name="_subject" value="Solicitação de Compra" />
+    <input type="hidden" name="_cc" value="{{ site.author.email }}" />
+{% if jekyll.environment == "production" %}
+    <input type="hidden" name="_next" value="{{ '/obrigado/' | absolute_url }}" />
+{% else %}
+    <input type="hidden" name="_next" value="http://localhost:8081/obrigado/" />
+{% endif %}
+    <input type="hidden" name="_template" value="box" />
+    <input type="hidden" id="email" name="email" value="{contatoEmail}" />
+    <input type="hidden" id="message" name="message" value="{message}" />
+</form>
