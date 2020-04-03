@@ -20,4 +20,4 @@ E ainda ajudamos os pequenos comerciantes.
 
 Portanto fique em casa!
 
-[Solicite aqui]({{ '/contato' | prepend: site.baseurl }}) | [Cadastre um estabelecimento]({{ '/cadastro' | prepend: site.baseurl }})
+[Começe aqui]({{ '/contato' | prepend: site.baseurl }}) | [Cadastre um estabelecimento]({{ '/cadastro' | prepend: site.baseurl }})
