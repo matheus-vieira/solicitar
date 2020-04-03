@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h1>{{page.Nome}}</h1>
+
+<ul>
+    <li>E-mail: {{page.Email}}</li>
+    <li>Telefone: {{page.Telefone}}</li>
+    <li>Whatsapp: {{page.Whatsapp}}</li>
+    <li>Endereço:
+        {% for prop in page.Endereco %}
+        {% if forloop.first == false %} - {% endif %}
+        {{ prop[1] }}
+        {% endfor %}
+
+    </li>
+    <li>Categorias: {{page.Categoria}}</li>
+</ul>

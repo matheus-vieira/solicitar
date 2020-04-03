@@ -37,3 +37,14 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
+
+collections:
+  estabelecimentos:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "estabelecimentos"
+    values:
+      layout: "estabelecimentos"
+ 

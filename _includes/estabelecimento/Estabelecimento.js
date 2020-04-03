@@ -3,9 +3,9 @@ const Estabelecimento = function Estabelecimento(d) {
 
     Object.assign(this, d || {});
     Object.defineProperty(this, "id", defineProp(uuid()));
-    const end = Object.values(this["Endereço"]).join(", ");
+    const end = Object.values(this["Endereco"]).join(", ");
     Object.defineProperty(this, "end", defineProp(`${end}`));
-    Object.defineProperty(this, "label", defineProp(`${this.Nome}`));
+    Object.defineProperty(this, "label", defineProp(`${this.nome}`));
     const categorias = Object.values(this["Categoria"]).join(", ");
     Object.defineProperty(this, "categorias", defineProp(`${categorias}`));
   };
