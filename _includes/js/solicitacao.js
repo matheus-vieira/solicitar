@@ -1,6 +1,6 @@
 const solicitacao = (function Solicitacao(d) {
   const storageKey = "solicitcao",
-    storage = sessionStorage,
+    storage = localStorage,
     solicitcaoObj = Object.create(null, {});
 
   const getSolicitacao = function getSolicitacao() {

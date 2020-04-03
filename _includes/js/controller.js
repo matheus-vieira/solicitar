@@ -1,13 +1,15 @@
 const controller = function controller(key, obj) {
   let list = [];
+  const storage = localStorage;
 
   const updateStorage = function updateStorage(newList) {
+    if (newList) storage.clear();
     const str = JSON.stringify(newList || list);
-    localStorage.setItem(key, str);
+    storage.setItem(key, str);
   };
 
   const getStorage = function getStorage(newList) {
-    list = localStorage.getItem(key);
+    list = storage.getItem(key);
     if (list) list = JSON.parse(list);
     list = list || [];
 
