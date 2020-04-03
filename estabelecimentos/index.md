@@ -1,4 +1,4 @@
-# Estabelecimentos
+# Estabelecimentos [Cadastre]({{ '/cadastro' | prepend: site.baseurl }})
 
 {% for est in site.estabelecimentos %}
 
