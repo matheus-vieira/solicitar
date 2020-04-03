@@ -2,18 +2,18 @@
 layout: default
 ---
 
-<h1>{{page.nome}}</h1>
-
-<ul>
-    <li>E-mail: {{page.email}}</li>
-    <li>Telefone: {{page.telefone}}</li>
-    <li>Whatsapp: {{page.whatsapp}}</li>
-    <li>Endereço:
+<div class="Box">
+    <div class="Box-header">
+        <h3 class="Box-title">{{ page.nome }}</h3>
+    </div>
+    <div class="Box-row"><strong>Telefone: </strong>{{ page.telefone }}</div>
+    <div class="Box-row"><strong>Whatsapp: </strong>{{ page.whatsapp }}</div>
+    <div class="Box-row"><strong>E-mail: </strong>{{ page.email }}</div>
+    <div class="Box-row"><strong>Endereço: </strong>
         {% for prop in page.endereco %}
         {% if forloop.first == false %} - {% endif %}
         {{ prop[1] }}
         {% endfor %}
-
-    </li>
-    <li>Categorias: {{page.categoria}}</li>
-</ul>
+    </div>
+    <div class="Box-row"><strong>Categorias: </strong>{{ page.categoria }}</div>
+</div>
