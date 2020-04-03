@@ -1,8 +1,8 @@
-# Solicitação de Compras
+# Solicitar
 
 Os profissionais da saúde recomendam que fiquemos em reclusão por um período indeterminado com o intuito de achatar a curva de contágio do corona vírus (COVID 19).
 
-Este projeto tem como objetivo manter as pessoas em quarentena.
+Este projeto tem como objetivo realizar a solicitação de itens, serviços e/ou doações a estabelacimentos através enviando uma mensagem por Whatsapp ou por e-mail, ajudando a manter as pessoas em quarentena.
 
 Toda ajuda (alteração de layout, revisão de texto, adição de estabelecimento e etc) é bem vinda.
 
