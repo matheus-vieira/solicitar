@@ -2,6 +2,6 @@
 
 {% for est in site.estabelecimentos %}
 
-- [{{ est.Nome }}]({{ est.url }})
+- [{{ est.nome }}]({{ est.url }})
 
 {% endfor %}
