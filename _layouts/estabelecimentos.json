@@ -1,0 +1,11 @@
+---
+layout: compress
+---
+
+"{{page.nome}}": {
+    "email": "{{page.email}}",
+    "telefone": "{{page.telefone}}",
+    "whatsapp": "{{page.whatsapp}}",
+    "endereco": "{{page.endereco | jsonify}}",
+    "categoria": "{{page.categoria}}"
+}

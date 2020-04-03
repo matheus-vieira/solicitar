@@ -1,5 +1,21 @@
 ---
 permalink: /assets/json/estabelecimentos.json
+layout: compress
 ---
 
-{{ site.estabelecimentos | flatten | jsonify }}
+{
+{% for est in site.estabelecimentos %}
+    "{{est.nome}}": {
+        "nome": "{{est.nome}}",
+        "email": "{{est.email}}",
+        "telefone": "{{est.telefone}}",
+        "whatsapp": "{{est.whatsapp}}",
+        "endereco": {
+            {% for prop in est.endereco %}
+            "{{ prop[0] }}": "{{ prop[1] }}"{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+        },
+        "categoria": "{{est.categoria}}"
+    }{% if forloop.last == false %},{% endif %}
+{% endfor %}
+}
