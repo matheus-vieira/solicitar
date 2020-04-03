@@ -47,4 +47,11 @@ defaults:
       type: "estabelecimentos"
     values:
       layout: "estabelecimentos"
- 
+
+
+# navbar pages
+navbar:
+  - slug: contato
+    title: Solicitar - Começe aqui
+  - slug: estabelecimentos
+    title: Estabelecimentos

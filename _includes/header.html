@@ -1,0 +1,13 @@
+<div class="Header">
+    <div class="Header-item">
+        <a href="{{ '/'' | prepend: site.baseurl }}" class="Header-link f4 d-flex flex-items-center">
+            <span>Solicitar - Home</span>
+        </a>
+    </div>
+    {% for item in site.navbar %}
+    <div class="Header-item">
+        <a href="{{ '/' | prepend: site.baseurl }}{{ item.slug }}" class="Header-link"
+            title="{{ item.title }}">{{ item.title }}</a>
+    </div>
+    {% endfor %}
+</div>
