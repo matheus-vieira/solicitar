@@ -1,0 +1,9 @@
+{
+    "id": {{ include.id | jsonify }},
+    "nome": {{ include.est.nome | jsonify }},
+    "email": {{ include.est.email | jsonify }},
+    "telefone": {{ include.est.telefone | jsonify }},
+    "whatsapp": {{ include.est.whatsapp | jsonify }},
+    "endereco": {{ include.est.endereco | jsonify }},
+    "categoria": {{ include.est.categoria | jsonify }}
+}
