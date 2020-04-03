@@ -52,6 +52,6 @@ defaults:
 # navbar pages
 navbar:
   - slug: contato
-    title: Solicitar - Começe aqui
+    title: Começe aqui
   - slug: estabelecimentos
     title: Estabelecimentos
