@@ -33,6 +33,13 @@ Confirme os dados do estabelecimento.
 - [ ] Usar localização para filtrar os estabelecimentos.
 - [ ] Filtrar por categoria(s).
 - [ ] Cadastrar estabelecimentos com dados reais.
+- [ ] Usar SCSS
+
+## Tecnologias utilizadas
+
+- Framework CSS - [Primer](https://primer.style/)
+- Javascrpit - [Vanilla JS](http://vanilla-js.com/)
+- Gerador de HTML estático - [Jekyll](https://jekyllrb.com/)
 
 ## Rodar localmente
 
