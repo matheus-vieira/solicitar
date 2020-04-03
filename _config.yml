@@ -41,6 +41,8 @@ compress_html:
 collections:
   estabelecimentos:
     output: true
+    permalink: /:collection/:name
+
 defaults:
   - scope:
       path: ""
