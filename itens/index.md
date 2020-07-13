@@ -1,6 +1,6 @@
 # Selecione os itens
 
-Aqui você deve selecionar os items que irá solicitar ao estabelecimento selecionado
+Aqui você deve selecionar os itens que irá solicitar ao estabelecimento selecionado
 
 {% comment %}
 adicionar os dados do estabelecimento
@@ -12,6 +12,6 @@ Preencha os itens conforme a sua necessidade
 
 {% include itens/form.html %}
 
-[Voltar](javascript:history.back()){: #aPrev} | [Solicitar]({{ '/solicitar' | prepend: site.baseurl }}){: #aProx }
+[Voltar](javascript:history.back()){: #aPrev} | [Encaminhar]({{ '/encaminhar' | prepend: site.baseurl }}){: #aProx }
 
 {% include itens/scripts.html %}
