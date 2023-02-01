@@ -3,10 +3,8 @@ permalink: /assets/json/estabelecimentos.json
 layout: compress
 ---
 
-{
+[
 {% for est in site.estabelecimentos %}
-    {{ est.nome | jsonify }}:
-        {% include estabelecimento.json id=forloop.index est=est %} 
-    {% if forloop.last == false %},{% endif %}
+{% include estabelecimento.json id=forloop.index est=est %}{% if forloop.last == false %},{% endif %}
 {% endfor %}
-}
+]
