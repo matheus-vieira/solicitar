@@ -1,5 +1,7 @@
 # Solicitar itens, serviços ou doações
 
+[Solicitar aqui]({{ '/contato' | prepend: site.baseurl }}) | [Cadastre um estabelecimento]({{ '/cadastro' | prepend: site.baseurl }})
+
 Devido a pandemia causado pelo coronavirus espalhando o covid-19 mundo afora profissionais de saúde e governantes recomendam que as pessoas fiquem em quarentena e que se mantenha um distanciamento social.
 
 Porém ainda precisamos de itens, serviços, e em alguns casos, doações.
@@ -20,4 +22,4 @@ E ainda ajudamos os pequenos comerciantes.
 
 Portanto fique em casa!
 
-[Começe aqui]({{ '/contato' | prepend: site.baseurl }}) | [Cadastre um estabelecimento]({{ '/cadastro' | prepend: site.baseurl }})
+[Solicitar aqui]({{ '/contato' | prepend: site.baseurl }}) | [Cadastre um estabelecimento]({{ '/cadastro' | prepend: site.baseurl }})
