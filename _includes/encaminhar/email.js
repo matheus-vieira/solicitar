@@ -2,7 +2,7 @@ const aEmailHandler = function aEmailHandler(ev) {
     ev.preventDefault();
     try {
       const sol = solicitacao.getSolicitacao();
-      checkSolicitacao(sol, "Email");
+      checkSolicitacao(sol, "email");
       const emailObj = buildEmailObject(sol);
       formEmail.action = formEmail.action + emailObj.estabelecimentoEmail;
       email.value = emailObj.contatoEmail;
