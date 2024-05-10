@@ -1,5 +1,6 @@
 const aEmailHandler = function aEmailHandler(ev) {
     ev.preventDefault();
+    debugger;
     try {
       const sol = solicitacao.getSolicitacao();
       checkSolicitacao(sol, "email");
@@ -29,7 +30,7 @@ const aEmailHandler = function aEmailHandler(ev) {
   },
   buildEmailObject = function(sol) {
     return Object.create(null, {
-      estabelecimentoEmail: defineProp(sol.estabelecimento.Email),
+      estabelecimentoEmail: defineProp(sol.estabelecimento.email),
       contatoEmail: defineProp(sol.contato.email),
       message: defineProp(buildEmailMessage(sol))
     });
